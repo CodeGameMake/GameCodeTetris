@@ -37,6 +37,26 @@ aside
 }
 #trigon
 {
-    //background-color: red;
+    margin-left: 10px;
     margin-top: 20px;
+}
+#tetragon
+{
+    border: 1px solid brown;
+    height: 75px;
+    width: 75px;
+    margin-left: 10px;
+}
+#parallelepiped
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#circle
+{
+    border: 1px solid teal;
+    border-radius: 35px;
+    height: 70px;
+    width: 70px;
+    margin-left: 20px;
 }
