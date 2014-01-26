@@ -72,6 +72,15 @@ aside
     border-top-left-radius: 0px;
     border-top-right-radius: 25px;
 }
-#arrow
+#big_tetragon
 {
+    width: 100px;
+    height: 75px;
+    border: 1px solid darkcyan;
+    margin-left: 10px;
+}
+#rhombus
+{
+    margin-left: 10px;
+    margin-top: 25px;
 }
