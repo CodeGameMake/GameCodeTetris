@@ -4,8 +4,3 @@ $(document).ready( function (){
 	$('#gamearea').html(HTML); 
 	});
 });
-function MoveBlock (){
-    $('#gamearea div').click(function(){
-            var Block
-    });
-}
