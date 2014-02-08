@@ -1,0 +1,51 @@
+/* Style for Block
+------------------------------------------------------------*/
+
+.block {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    min-width: 10%;
+    min-height: 10%;
+    max-width: 50%;
+    max-height: 50%;
+    width: 10%;
+    height: 10%;
+}
+.block-middle {
+    width: 20%;
+    height: 20%;
+}
+.block-big {
+    height: 40%;
+    width: 40%;
+}
+.block-blue {
+    background-color: #3399FF;
+}
+.block-red {
+    background-color: #FF0000;
+}
+.block-darkblue {
+    background-color: #0033CC;
+}
+.block-green {
+    background-color: green;
+}
+.block-yellow {
+    background-color: yellow;
+}
+.block-orange {
+    background-color: orange;
+}
+.block-violet {
+    background-color: #990099;
+}
+.block-turqoise {
+    background-color: #00FFFF;
+}
+.block-pink {
+    background-color: pink;
+}
+.block-steel {
+    background-color: #686870;
+}
