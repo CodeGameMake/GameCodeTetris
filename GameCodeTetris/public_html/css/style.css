@@ -20,6 +20,7 @@ section {
     height: 800px;
     width: 690px;
     float: left;
+	  position:relative;
     border: 1px solid blueviolet;
 }
 aside {
