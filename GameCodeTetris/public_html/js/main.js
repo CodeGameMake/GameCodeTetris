@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    $('#gamearea').click(function () {
-        var HTML = $('#html').val();
-        $('#gamearea').html(HTML);
-    });
+	$('.block').click(function () {
+		$('.block').animate({
+			top: '720px'
+		},"slow");
+	});
 });

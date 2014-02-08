@@ -4,6 +4,7 @@
 .block {
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	  position:absolute;
     min-width: 10%;
     min-height: 10%;
     max-width: 50%;
