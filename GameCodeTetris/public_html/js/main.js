@@ -39,7 +39,9 @@ Command.GoRight = function () {
 }
 
 Command.GoBottom = function () {
-	$('.block').css('margin-top', '50px');
+	var position = $('.block').css('top');
+	position = parseInt(position)+50+'px';
+	$('.block').css('top', position);
 }
 
 function FallBlock(speed) {
