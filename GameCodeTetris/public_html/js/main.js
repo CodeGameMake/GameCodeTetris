@@ -9,7 +9,38 @@ $(document).ready(function () {
 			}
 		});
 	});
+	$("#js").focusin(function () {
+		$("#js").keydown(function (event) {
+			if (event.which == "13") {
+				var command = $("#js").val();
+				$('#js').attr('disabled', 'disabled');
+				Command[command]();
+			}
+		});
+	});
+	
 });
+
+
+
+
+var Command = Object();
+
+Command.GoLeft = function () {
+	var position = $('.block').css('left');
+	position = parseInt(position)+50+'px';
+	$('.block').css('margin-left', position);
+}
+
+Command.GoRight = function () {
+	var position = $('.block').css('left');
+	position = parseInt(position)-50+'px';
+	$('.block').css('left', position);
+}
+
+Command.GoBottom = function () {
+	$('.block').css('margin-top', '50px');
+}
 
 function FallBlock(speed) {
 	$('.block').css('left', LeftRandom());
@@ -33,3 +64,4 @@ function LeftRandom() {
 	pixel = Math.round(pixel) + "px"
 	return pixel;
 }
+

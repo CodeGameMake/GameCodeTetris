@@ -21,6 +21,9 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+	  background-image: url(../images/bg.jpg);
+	  background-position: center;
+	  height: 100%;
 }
 
 /*
