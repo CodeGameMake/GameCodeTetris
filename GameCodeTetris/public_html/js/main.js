@@ -66,4 +66,12 @@ function LeftRandom() {
 	pixel = Math.round(pixel) + "px"
 	return pixel;
 }
-
+function Adaptation (position) {
+	if(position<0px) {
+		position = position*(-1);
+	}
+	if(position>690px) {
+		position = position-690px;
+	}
+	return position;
+}
