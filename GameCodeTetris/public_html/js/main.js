@@ -9,12 +9,23 @@ $(document).ready(function () {
 			}
 		});
 	});
+	
 	$("#js").focusin(function () {
 		$("#js").keydown(function (event) {
 			if (event.which == "13") {
 				var command = $("#js").val();
 				$('#js').attr('disabled', 'disabled');
 				Command[command]();
+			}
+		});
+	});
+	
+	$("#css").focusin(function () {
+		$("#css").keydown(function (event) {
+			if (event.which == "13") {
+				var code = $("#css").val();
+				$('#css').attr('disabled', 'disabled');
+				Enter_css(code); //start valid function
 			}
 		});
 	});
@@ -83,12 +94,30 @@ function RandomColor() {
     return color_block;
 }
 
-function Adaptation (position) {
-	if(position<0px) {
-		position = position*(-1);
+function Enter_css(text) {
+	if() {  // if 'height' true
+		css_height (parseInt(text));
 	}
-	if(position>690px) {
-		position = position-690px;
-	}
-	return position;
+	
+	if() {
+	
+	} 
 }
+
+function css_height(number) { 
+	$('.block').css('height', number+'%');
+}
+function css_width(number) {
+	
+}
+
+
+//function Adaptation (position) {
+//	if(position<0px) {
+//		position = position*(-1);
+//	}
+//	if(position>690px) {
+//		position = position-690px;
+//	}
+//	return position;
+//}
