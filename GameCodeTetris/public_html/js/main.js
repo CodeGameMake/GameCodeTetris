@@ -1,20 +1,20 @@
-$(document).ready(function () {
-	$("#html").focusin(function () {
-		$("#html").keydown(function (event) {
-			if (event.which == "13") {
-				var text = $("#html").val();
-				$('#html').attr('disabled', 'disabled');
-				CreateBlock(text);
-				FallBlock(5000);
+$(document).ready(function () {//This function catch keydown, create block and run fall of this block. Run all function when                                                                                                              page already upload.
+	$("#html").focusin(function () {//Activate the textarea id = #html when mouse there
+		$("#html").keydown(function (event) {// Catch keydown of key 13
+			if (event.which == "13") {//Run event if keydown key 13
+				var text = $("#html").val();//Takes #html value and give it to var text
+				$('#html').attr('disabled', 'disabled');//Disable textarea id = #html
+				CreateBlock(text);//Run function CreateBlock
+				FallBlock(5000);//Run function FallBlock with speed = 5000
 			}
 		});
 	});
-	$("#js").focusin(function () {
-		$("#js").keydown(function (event) {
-			if (event.which == "13") {
-				var command = $("#js").val();
-				$('#js').attr('disabled', 'disabled');
-				Command[command]();
+	$("#js").focusin(function () {//Activate the textarea id = #js when mouse there
+		$("#js").keydown(function (event) {//Catch keydown of key 13
+			if (event.which == "13") {//Run event if keydown key 13
+				var command = $("#js").val();//Takes #html value and give it to var command
+				$('#js').attr('disabled', 'disabled');//Disable textarea id = #js
+				Command[command]();//Run function Command
 			}
 		});
 	});
@@ -23,18 +23,18 @@ $(document).ready(function () {
 
 
 
-var Command = Object();
+var Command = Object();//Create var Command and say so it is object
 
-Command.GoLeft = function () {
-	var position = $('.block').css('left');
-	position = parseInt(position)+50+'px';
-	$('.block').css('margin-left', position);
+Command.GoLeft = function () {//This function create var position and move .block for 50 px to left. Create function GoLeft.
+	var position = $('.block').css('left');//Say that var position same as .block left value
+	position = parseInt(position)+50+'px';//Add 50 px to position value
+	$('.block').css('margin-left', position);//Give position value to .block margin-left
 }
 
-Command.GoRight = function () {
-	var position = $('.block').css('left');
-	position = parseInt(position)-50+'px';
-	$('.block').css('left', position);
+Command.GoRight = function () {//This function create var position and move .block for 50 px to right. Create function GoRight.
+	var position = $('.block').css('left');//Say that var position same as .block left value
+	position = parseInt(position)-50+'px';//Take 50 px from position value
+	$('.block').css('left', position);//Give position value to .block left
 }
 
 Command.GoBottom = function () {
