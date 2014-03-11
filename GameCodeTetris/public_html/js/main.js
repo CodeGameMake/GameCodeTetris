@@ -9,7 +9,7 @@ $(document).ready(function () {
 			}
 		});
 	});
-	
+
 	$("#js").focusin(function () {
 		$("#js").keydown(function (event) {
 			if (event.which == "13") {
@@ -19,7 +19,7 @@ $(document).ready(function () {
 			}
 		});
 	});
-	
+
 	$("#css").focusin(function () {
 		$("#css").keydown(function (event) {
 			if (event.which == "13") {
@@ -38,86 +38,87 @@ var Command = Object();
 
 Command.GoLeft = function () {
 	var position = $('.block').css('left');
-	position = parseInt(position)+50+'px';
+	position = parseInt(position) + 50 + 'px';
 	$('.block').css('margin-left', position);
 }
 
 Command.GoRight = function () {
 	var position = $('.block').css('left');
-	position = parseInt(position)-50+'px';
+	position = parseInt(position) - 50 + 'px';
 	$('.block').css('left', position);
 }
 
 Command.GoBottom = function () {
 	var position = $('.block').css('top');
-	position = parseInt(position)+50+'px';
+	position = parseInt(position) + 50 + 'px';
 	$('.block').css('top', position);
 }
 
 function FallBlock(speed) {
-    $('.block').css('left', LeftRandom());
-    $('.block').animate({
-        top: '720px'
-    }, speed);
+	$('.block').css('left', LeftRandom());
+	$('.block').animate({
+		top: '720px'
+	}, speed);
 
 }
 
 
 function CreateBlock(text) {
-    if (text == '<div></div>') {
-        $("#gamearea").html(text);
-        $('#gamearea div').addClass('block');
-        $('.block').addClass(RandomColor());
-    }
+	if (text == '<div></div>') {
+		$("#gamearea").html(text);
+		$('#gamearea div').addClass('block');
+		$('.block').addClass(RandomColor());
+	}
 }
 
 function LeftRandom() {
-		var pixel = Math.random() * 620;
-    pixel = Math.round(pixel) + "px";
-    return pixel;
+	var pixel = Math.random() * 620;
+	pixel = Math.round(pixel) + "px";
+	return pixel;
 }
 
 var color_class = new Array("block-blue",
-                            "block-green",
-                            "block-orange",
-                            "block-steel",
-                            "block-red",
-                            "block-darkblue",
-                            "block-yellow",
-                            "block-violet",
-                            "block-pink",
-                            "block-turqoise")
-function RandomColor() {
-    var number = Math.random() * 9;
-    number = Math.round(number);
-    var color_block = color_class[number];
-    return color_block;
-}
+	"block-green",
+	"block-orange",
+	"block-steel",
+	"block-red",
+	"block-darkblue",
+	"block-yellow",
+	"block-violet",
+	"block-pink",
+	"block-turqoise")
 
-function Enter_css(text) {
-	if() {  // if 'height' true
-		css_height (parseInt(text));
+	function RandomColor() {
+		var number = Math.random() * 9;
+		number = Math.round(number);
+		var color_block = color_class[number];
+		return color_block;
 	}
-	
-	if() {
-	
-	} 
-}
 
-function css_height(number) { 
-	$('.block').css('height', number+'%');
-}
-function css_width(number) {
-	
-}
+	function Enter_css(text) {
+		if ($("#css").text = 'height') {
+			var number = parseInt($("#css"));
+			alert(number);
+			var css_height = parseInt($("#css").text);
+		}
+	}
+
+	function css_height(number) {
+
+		$('.block').css('height', number + '%');
+	}
+
+	function css_width(number) {
+
+	}
 
 
-//function Adaptation (position) {
-//	if(position<0px) {
-//		position = position*(-1);
-//	}
-//	if(position>690px) {
-//		position = position-690px;
-//	}
-//	return position;
-//}
+	function Adaptation(position) {
+		if (position < '0px') {
+			position = parseInt(position * (-1)) + 'px';
+		}
+		if (position > '690px') {
+			position = parseInt(position - 690) + 'px';
+		}
+		return position;
+	}
