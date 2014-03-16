@@ -96,20 +96,29 @@ var color_class = new Array("block-blue",
 	}
 
 	function Enter_css(text) {
-		if ($("#css").text = 'height') {
-			var number = parseInt($("#css"));
-			alert(number);
-			var css_height = parseInt($("#css").text);
+		if ($("#css").text = 'height:' || $("#css").text = 'width:') {
+			css_height();
 		}
 	}
 
 	function css_height(number) {
+		if ($("#css").text = 'height:') {
+			var text = $("#css").text;
+			var number = text.slice(0,6);
+			number = parseInt(number);
+			$('.block').css('height', number + '%');
 
-		$('.block').css('height', number + '%');
+		}
 	}
 
 	function css_width(number) {
+		if ($("#css").text = 'width:') {
+			var text = $("#css").text;
+			var number = text.slice(0,6);
+			number = parseInt(number);
+			$('.block').css('width', number + '%');
 
+		}
 	}
 
 
