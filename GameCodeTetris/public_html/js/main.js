@@ -96,15 +96,15 @@ var color_class = new Array("block-blue",
 	}
 
 	function Enter_css(text) {
-		if ($("#css").text = 'height:' || $("#css").text = 'width:') {
+		if ($("#css").val().substr(0,6) == 'height' || $("#css").val().substr(0,5) == 'width') {
 			css_height();
 		}
 	}
 
 	function css_height(number) {
-		if ($("#css").text = 'height:') {
-			var text = $("#css").text;
-			var number = text.slice(0,6);
+		if ($("#css").val().substr(0,6) == 'height') {
+			var text = $("#css").val();
+      var number = text.substr(7,2);
 			number = parseInt(number);
 			$('.block').css('height', number + '%');
 
